@@ -1,0 +1,4 @@
+My solutions for Advent of Code 2015. Written in C++, input files not submitted. All days compatible with C++11, but Day4 uses libssl-dev. 
+Compiled with GCC, recommended to set -O3.
+I guess that many tasks were more challenging back in 2015, because some B tasks seemed a bit to easy to just re-use the same solution as in A. I guess that modern computers win again. 
+All days reasonably fast except for Day 20 which has an execution time of about 1.40 min on my computer. Not proud of that one but can't be arsed to improve it.
