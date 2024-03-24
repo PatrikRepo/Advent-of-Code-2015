@@ -44,6 +44,8 @@ uint64_t calculatePrimeSum(const uint64_t number)
 	n /= 100;
 	n *= 80;
 	n /= 100;
+	//My answers are divisible by 2,3,5 and 7, so each step should be 2*3*5*7=210 long
+	n -= n%210;
 	while(!done)
 	{
 		uint64_t sum = 0;
@@ -61,7 +63,7 @@ uint64_t calculatePrimeSum(const uint64_t number)
 				}
 			}
 		}
-		n += 2;
+		n += 210;
 	}
 	return result;
 }
@@ -103,6 +105,7 @@ uint64_t calculateNewPrimeSum(const uint64_t number)
 	n /= 100;
 	n *= 85;
 	n /= 100;
+	n -= n%210;
 	while(!done)
 	{
 		uint64_t sum = 0;
@@ -127,7 +130,7 @@ uint64_t calculateNewPrimeSum(const uint64_t number)
 				}
 			}
 		}
-		n += 2;
+		n += 210;
 	}
 	return result;
 }
