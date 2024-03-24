@@ -47,12 +47,13 @@ uint64_t calculatePrimeSum(const uint64_t number)
 	while(!done)
 	{
 		uint64_t sum = 0;
-		for(uint64_t i=1; i<=n; i++)
+		uint64_t checkNumber = number - 10*n;
+		for(uint64_t i=1; i<=n/2; i++)
 		{
 			if(n%i == 0)
 			{
 				sum += 10*i;
-				if(sum >= number)
+				if(sum >= checkNumber)
 				{
 					done = true;
 					result = n;
@@ -105,14 +106,15 @@ uint64_t calculateNewPrimeSum(const uint64_t number)
 	while(!done)
 	{
 		uint64_t sum = 0;
-		for(uint64_t i=n; i>=1; i--)
+		uint64_t checkNumber = number - n*11;
+		for(uint64_t i=n/2; i>=1; i--)
 		{
 			if(n%i == 0)
 			{
 				if(n/i <= 50)
 				{
 					sum += 11*i;
-					if(sum >= number)
+					if(sum >= checkNumber)
 					{
 						done = true;
 						result = n;
